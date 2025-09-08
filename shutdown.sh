@@ -87,7 +87,7 @@ for func in "${functions_to_remove[@]}"; do
   sed -i -E "/^function[[:space:]]+${func}[[:space:]]*()/,/^}$/d" ~/.bashrc
 done
 
-sed -i '/^# 开启系统代理/d; /^# 关闭系统代理/d; /^# 新增关闭系统函数/d; /^# 检查clash进程是否正常启动/d; /proxy_on/d; /^#.*proxy_on/d' ~/.bashrc
+sed -i '/^# 开启系统代理/d; /^# 关闭系统代理/d; /^# 新增关闭系统函数/d; /^# 检查clash进程是否正常启动/d; /proxy_on$/d; /^#.*proxy_on/d' ~/.bashrc
 sed -i '/^$/N;/^\n$/D' ~/.bashrc
 
 # 重新加载.bashrc文件
